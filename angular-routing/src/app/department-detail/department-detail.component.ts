@@ -39,7 +39,9 @@ export class DepartmentDetailComponent implements OnInit {
 
   gotoDepartments() {
     let selectedID = this.departmentId ? this.departmentId : null;
-    this.router.navigate(['/departments', { id: selectedID }]);
+    // this.router.navigate(['/departments', { id: selectedID }]);
+    this.router.navigate(['../', { id: selectedID }], { relativeTo: this.activatedRoute })
+
   }
 
 }
